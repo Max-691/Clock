@@ -1,8 +1,8 @@
 // DOM - Get Article By Their ID
-const first_nb = document.getElementById('first_nb');
-const second_nb = document.getElementById('second_nb');
-const third_nb = document.getElementById('third_nb');
-const fourth_nb = document.getElementById('fourth_nb');
+let first_nb = document.getElementById('first_nb');
+let second_nb = document.getElementById('second_nb');
+let third_nb = document.getElementById('third_nb');
+let fourth_nb = document.getElementById('fourth_nb');
 
 // DOM - Get Span By Their Class
 // First Article
@@ -41,11 +41,39 @@ let q_bar5 = document.getElementsByClassName('q_bar5');
 let q_bar6 = document.getElementsByClassName('q_bar6');
 let q_bar7 = document.getElementsByClassName('q_bar7');
 
-let hours = first_nb;
-let hours2 = second_nb;
-let min = third_nb;
-let min2 = fourth_nb;
+let hours = 2;
+let hours2 = 4;
+let min = 0;
+let min2 = 0;
 
-function timer(){
+
+  setInterval(function(){
+    min2 --;
+    if (min2 < 0) {
+      min --;
+      min2 = 9;
+    }
+
+    if (min < 0) {
+      hours2 --;
+      min = 5;
+    }
+
+    if (hours2 < 0) {
+      hours --;
+      hours2 = 9;
+    }
+
+    if (hours < 0) {
+      hours = 2;
+      hours2 = 4;
+      min = 0;
+      min2 = 0;
+    }
+    console.log(hours, hours2, min, min2);
+  },1000)
+
+//span.className = "class"
+if (hours === 2) {
   
 }
