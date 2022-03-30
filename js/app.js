@@ -1,36 +1,40 @@
-let clock = document.getElementById('clock');
-let div = document.querySelectorAll('div');
+let lis = document.querySelectorAll('.huit');
+
+let minutes = 59
+let secondes = 59
 
 
-let hours = 2;
-let hours2 = 4;
-let min = 0;
-let min2 = 0;
-
-
-  setInterval(function(){
-    min2 --;
-    if (min2 < 0) {
-      min --;
-      min2 = 9;
+const timer = setInterval(function(){
+    if (secondes == 0) {
+      secondes = 59;
+      if(minutes == 0){
+        clearInterval(timer);
+      } else {
+        minutes--;
+      }
+    } else {
+      secondes--;
     }
-
-    if (min < 0) {
-      hours2 --;
-      min = 5;
+    let time = "";
+    if(minutes < 10){
+      time += "0" + minutes;
+    } else {
+      time += minutes;
     }
-
-    if (hours2 < 0) {
-      hours --;
-      hours2 = 9;
+    if(secondes < 10){
+      time += "0" + secondes;
+    } else {
+      time += secondes;
     }
-
-    if (hours < 0) {
-      hours = 2;
-      hours2 = 4;
-      min = 0;
-      min2 = 0;
+    for (let index = 0; index < time.length; index++) {
+      if(time[index] === "0"){
+        lis[index].firstElementChild.classList.remove("bas");
+        lis[index].firstElementChild.classList.add("gauche haut droite");
+        lis[index].firstElementChild.classList.remove("haut");
+        lis[index].firstElementChild.classList.add("gauche bas droite");
+      }
+      
     }
-    console.log(hours, hours2, min, min2);
+    console.log(time);
   },100)
 
