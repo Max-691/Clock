@@ -32,5 +32,5 @@ let min2 = 0;
       min2 = 0;
     }
     console.log(hours, hours2, min, min2);
-  },1000)
+  },100)
 
