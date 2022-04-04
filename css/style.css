@@ -7,7 +7,6 @@ body{
     font-size: 2rem;
 }
 
-
 ul{
     list-style: none;
     display: flex;
@@ -37,4 +36,24 @@ ul div{
     border: solid grey 1px;
     width: 5rem;
     height: 5rem;
+}
+
+.haut{
+    border-top-color: red;
+}
+.bas{
+    border-bottom-color: red;
+}
+.gauche{
+    border-left-color: red;
+}
+.droite{
+    border-right-color: red;
+}
+
+.orange{
+    border-color: orange;
+}
+.blue{
+    border-color: blue;
 }
