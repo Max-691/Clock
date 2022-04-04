@@ -1,7 +1,7 @@
 let lis = document.querySelectorAll('.huit');
-
-let minutes = 59
-let secondes = 59
+let clock_ul = document.getElementById('clock');
+let minutes = 59;
+let secondes = 59;
 
 
 const timer = setInterval(function(){
@@ -37,9 +37,9 @@ const timer = setInterval(function(){
         lis[index].firstElementChild.classList.add("droite");
         // BOTTOM DIV
         lis[index].lastElementChild.classList.remove("haut");
-        lis[index].firstElementChild.classList.add("gauche");
-        lis[index].firstElementChild.classList.add("bas"); 
-        lis[index].firstElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.add("gauche");
+        lis[index].lastElementChild.classList.add("bas"); 
+        lis[index].lastElementChild.classList.add("droite");
       }
 
       // IF 1
@@ -62,18 +62,120 @@ const timer = setInterval(function(){
         lis[index].firstElementChild.classList.add("haut");
         lis[index].firstElementChild.classList.add("droite");
         lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.remove("gauche");
+
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("gauche");
+        lis[index].lastElementChild.classList.add("bas");
+        lis[index].lastElementChild.classList.add("haut");
+        lis[index].lastElementChild.classList.remove("droite");
+      }
+
+      // IF 3
+      if(time[index] === "3"){
+        lis[index].firstElementChild.classList.add("haut");
+        lis[index].firstElementChild.classList.add("droite");
+        lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.remove("gauche");
+
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.add("bas");
+        lis[index].lastElementChild.classList.add("haut");
+        lis[index].lastElementChild.classList.remove("gauche");
+      }
+
+      // IF 4
+      if (time[index] === "4"){
+        lis[index].firstElementChild.classList.add("gauche");
+        lis[index].firstElementChild.classList.add("droite");
+        lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.remove("haut");
+        
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.remove("bas");
+        lis[index].lastElementChild.classList.add("haut");
+        lis[index].lastElementChild.classList.remove("gauche");
+      }
+
+      // IF 5
+      if (time[index] === "5"){
+        lis[index].firstElementChild.classList.add("haut");
         lis[index].firstElementChild.classList.add("gauche");
         lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.remove("droite");
+
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.add("bas");
+        lis[index].lastElementChild.classList.add("haut");
+        lis[index].lastElementChild.classList.remove("gauche");
       }
 
+      // IF 6
+      if (time[index] === "6"){
+        lis[index].firstElementChild.classList.add("haut");
+        lis[index].firstElementChild.classList.add("gauche");
+        lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.remove("droite");
 
-
-      else{
-        lis[index].firstElementChild.classList.add("orange");
-        lis[index].lastElementChild.classList.add("blue");
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.add("bas");
+        lis[index].lastElementChild.classList.add("gauche");
+        lis[index].lastElementChild.classList.add("haut");
       }
-      
+
+      // IF 7
+      if (time[index] === "7"){
+        lis[index].firstElementChild.classList.add("haut");
+        lis[index].firstElementChild.classList.add("droite");
+        lis[index].firstElementChild.classList.remove("bas");
+        lis[index].firstElementChild.classList.remove("gauche");
+
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.remove("bas");
+        lis[index].lastElementChild.classList.remove("haut");
+        lis[index].lastElementChild.classList.remove("gauche");
+      }
+
+      if(time[index] === "8"){
+        lis[index].firstElementChild.classList.add("haut");
+        lis[index].firstElementChild.classList.add("droite");
+        lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.add("gauche");
+
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("haut");
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.add("bas");
+        lis[index].lastElementChild.classList.add("gauche");
+      }
+
+      // IF 9
+      if (time[index] === "9"){
+        lis[index].firstElementChild.classList.add("haut");
+        lis[index].firstElementChild.classList.add("droite");
+        lis[index].firstElementChild.classList.add("bas");
+        lis[index].firstElementChild.classList.add("gauche");
+
+        // BOTTOM DIV
+        lis[index].lastElementChild.classList.add("droite");
+        lis[index].lastElementChild.classList.add("bas");
+        lis[index].lastElementChild.classList.add("haut");
+        lis[index].lastElementChild.classList.remove("gauche");
+      }
+
     }
-    console.log(time);
-  },100)
+    let displayTime_p = document.getElementById('displayTime');
+   
+    displayTime_p.textContent = "It is " +  minutes + ":" + secondes;
+    // displayTime_p.insertAdjacentElement("afterend", clock_ul);
+    // displayTime_p.style.fontFamily = "LiquidCrystal";
+    
+    // J'ai voulu remplacer le console.log par un joli p placé en dessous de l'heure pour l'indiquer en texte mais je n'ai pas réussi à changer la font
+    
+  },1000)
 

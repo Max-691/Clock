@@ -20,6 +20,7 @@ ul li{
 .separation div{
     width: 1rem;
     height: 1rem;
+    border: solid grey 2px;
 }
 .separation{
     padding: 0 1rem 0 1rem;
@@ -33,27 +34,30 @@ ul li div:nth-last-of-type(2){
 }
 
 ul div{
-    border: solid grey 1px;
+    border: solid grey 4px;
     width: 5rem;
     height: 5rem;
 }
 
 .haut{
-    border-top-color: red;
+    border-top-color: red 2px;
 }
 .bas{
-    border-bottom-color: red;
+    border-bottom-color: red 2px;
 }
 .gauche{
-    border-left-color: red;
+    border-left-color: red 2px;
 }
 .droite{
-    border-right-color: red;
+    border-right-color: red 2px;
 }
 
-.orange{
-    border-color: orange;
-}
-.blue{
-    border-color: blue;
-}
+
+    @font-face {
+        font-family: "LiquidCrystal";
+        src: url("../font/LiquidCrystal-LightItalic.otf") format("otf");
+    }
+
+    #displayTime{
+        font-family: "LiquidCrystal";
+    }
