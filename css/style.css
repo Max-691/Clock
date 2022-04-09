@@ -7,6 +7,7 @@ body{
     font-size: 2rem;
 }
 
+
 ul{
     list-style: none;
     display: flex;
@@ -20,7 +21,6 @@ ul li{
 .separation div{
     width: 1rem;
     height: 1rem;
-    border: solid grey 2px;
 }
 .separation{
     padding: 0 1rem 0 1rem;
@@ -34,30 +34,11 @@ ul li div:nth-last-of-type(2){
 }
 
 ul div{
-    border: solid grey 4px;
+    border: solid grey 3px;
     width: 5rem;
     height: 5rem;
 }
 
-.haut{
-    border-top-color: red 2px;
+.haut {
+    border-top-color: red;
 }
-.bas{
-    border-bottom-color: red 2px;
-}
-.gauche{
-    border-left-color: red 2px;
-}
-.droite{
-    border-right-color: red 2px;
-}
-
-
-    @font-face {
-        font-family: "LiquidCrystal";
-        src: url("../font/LiquidCrystal-LightItalic.otf") format("otf");
-    }
-
-    #displayTime{
-        font-family: "LiquidCrystal";
-    }

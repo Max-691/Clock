@@ -36,7 +36,7 @@ const timer = setInterval(function(){
         lis[index].firstElementChild.classList.add("haut");
         lis[index].firstElementChild.classList.add("droite");
         // BOTTOM DIV
-        lis[index].lastElementChild.classList.remove("haut");
+        lis[index].lastElementChild.classList.add("haut");
         lis[index].lastElementChild.classList.add("gauche");
         lis[index].lastElementChild.classList.add("bas"); 
         lis[index].lastElementChild.classList.add("droite");
@@ -45,17 +45,17 @@ const timer = setInterval(function(){
       // IF 1
       if(time[index] === "1"){
         // TOP DIV
-        lis[index].firstElementChild.classList.add("gauche");
-        lis[index].firstElementChild.classList.remove("droite");
+        lis[index].firstElementChild.classList.remove("gauche");
+        lis[index].firstElementChild.classList.add("droite");
         lis[index].firstElementChild.classList.remove("bas");
         lis[index].firstElementChild.classList.remove("haut");
 
         // BOTTOM DIV
-        lis[index].lastElementChild.classList.add("gauche");
-        lis[index].lastElementChild.classList.remove("droite");
+        lis[index].lastElementChild.classList.remove("gauche");
+        lis[index].lastElementChild.classList.add("droite");
         lis[index].lastElementChild.classList.remove("bas");
         lis[index].lastElementChild.classList.remove("haut");
-      }
+      }    
 
       // IF 2
       if(time[index] === "2"){
@@ -169,13 +169,6 @@ const timer = setInterval(function(){
       }
 
     }
-    let displayTime_p = document.getElementById('displayTime');
    
-    displayTime_p.textContent = "It is " +  minutes + ":" + secondes;
-    // displayTime_p.insertAdjacentElement("afterend", clock_ul);
-    // displayTime_p.style.fontFamily = "LiquidCrystal";
-    
-    // J'ai voulu remplacer le console.log par un joli p placé en dessous de l'heure pour l'indiquer en texte mais je n'ai pas réussi à changer la font
-    
   },1000)
 
