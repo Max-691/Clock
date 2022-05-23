@@ -1,0 +1,103 @@
+body{
+  background: #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#clock{
+  width: 75vw;
+  height: 50vh;
+  background: #5e5e5e;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.huit{
+    width: 15%;
+    height: 100%;
+   position: relative;
+}
+
+.tile{
+  background: #ff2929;
+  height: 15px;
+  width: 100%;
+}
+
+#points{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 50px;
+}
+
+.point{
+  background: #ff2929;
+  width: 50px;
+  height: 50px;
+}
+
+/* Tiles: top right bottom left...*/
+.top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 15% 100%);
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(15% 0, 90% 0, 100% 100%, 0 100%);
+
+}
+
+.top-left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 15px;
+  clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+}
+
+.top-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 15px;
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+.bottom-left{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 15px;
+  clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+}
+
+.bottom-right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 15px;
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  clip-path: polygon(15% 0%, 90% 0%, 100% 50%, 90% 100%, 15% 100%, 0% 50%);
+
+ 
+}
