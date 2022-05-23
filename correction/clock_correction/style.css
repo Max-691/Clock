@@ -14,18 +14,24 @@ body{
   justify-content: space-around;
 }
 
+.on{
+  background: #ff2929;
+}
+
+.off{
+  background: #2d2d2d;
+}
 
 .huit{
     width: 20%;
     height: 100%;
-    background: aqua;
    position: relative;
 }
 
 .tile{
-  background: #ff2929;
   height: 10px;
   width: 100%;
+  background: #ff2929;
 }
 
 #points{
