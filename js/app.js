@@ -167,7 +167,7 @@ const timer = setInterval(function(){
         lis[index].lastElementChild.classList.add("haut");
         lis[index].lastElementChild.classList.remove("gauche");
       }
-
+      
     }
    
   },1000)
